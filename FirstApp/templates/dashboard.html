@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dashboard</title>
+    <!-- Boxicons CDN Link -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class="bx bx-leaf"></i>
+        <span class="logo_name">Elevate Trend</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="{% url 'dashboard' %}" class="active">
+            <i class="bx bx-grid-alt"></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'account' %}">
+            <i class="bx bxs-user-account"></i>
+            <span class="links_name">Account</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'report' %}">
+            <i class="bx bx-trending-up"></i>
+            <span class="links_name">Report</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'analytics' %}">
+            <i class="bx bx-pie-chart-alt-2"></i>
+            <span class="links_name">Analytics</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'notification' %}">
+            <i class="bx bxs-bell"></i>
+            <span class="links_name">Notification</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'support' %}">
+            <i class="bx bx-support"></i>
+            <span class="links_name">Support</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'message' %}">
+            <i class="bx bx-message"></i>
+            <span class="links_name">Messages</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'dashboard' %}">
+            <i class="bx bx-cog"></i>
+            <span class="links_name">Setting</span>
+          </a>
+        </li>
+        <li class="log_out">
+          <a href="#">
+            <i class="bx bx-log-out"></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <nav>
+        <div class="sidebar-button">
+          <i class="bx bx-menu sidebarBtn"></i>
+          <span class="dashboard">Dashboard</span>
+        </div>
+        <div class="search-box">
+          <input type="text" placeholder="Search..." />
+          <i class="bx bx-search"></i>
+        </div>
+        <div class="profile-details">
+          <img src="{% static 'images/logo.png' %}" alt="" />
+          <span class="admin_name">Name</span>
+          <i class="bx bx-chevron-down"></i>
+        </div>
+      </nav>
+
+      <div class="home-content">
+        <p>Integration</p>
+        <div class="overview-boxes">
+          <div class="box">
+            <div class="right-side">
+              <div class="box-topic">Facebook</div>
+              <label class="switch">
+                <input
+                  type="checkbox"
+                  class="toggleSwitch"
+                  data-label-id="facebookLabel"
+                />
+                <span class="slider"></span>
+              </label>
+              <span id="facebookLabel">Connect</span>
+            </div>
+            <img src="{% static 'images/facebook.png' %}" alt="" class="acc" />
+          </div>
+          <div class="box">
+            <div class="right-side">
+              <div class="box-topic">Instagram</div>
+              <label class="switch">
+                <input
+                  type="checkbox"
+                  class="toggleSwitch"
+                  data-label-id="instagramLabel"
+                />
+                <span class="slider"></span>
+              </label>
+              <span id="instagramLabel">Connect</span>
+            </div>
+            <img src="{% static 'images/instagram.png' %}" alt="" class="acc" />
+          </div>
+          <div class="box">
+            <div class="right-side">
+              <div class="box-topic">Twitter</div>
+              <label class="switch">
+                <input
+                  type="checkbox"
+                  class="toggleSwitch"
+                  data-label-id="twitterLabel"
+                />
+                <span class="slider"></span>
+              </label>
+              <span id="twitterLabel">Connect</span>
+            </div>
+            <img src="{% static 'images/twitter.png' %}" alt="" class="acc" />
+          </div>
+
+          <div class="box">
+            <div class="right-side">
+              <div class="box-topic">LinkedIn</div>
+              <label class="switch">
+                <input
+                  type="checkbox"
+                  class="toggleSwitch"
+                  data-label-id="linkedinLabel"
+                />
+                <span class="slider"></span>
+              </label>
+              <span id="linkedinLabel">Connect</span>
+            </div>
+            <img src="{% static 'images/linkedin.png' %}" alt="" class="acc" />
+          </div>
+          <div class="box">
+            <div class="right-side">
+              <div class="box-topic">Youtube</div>
+              <label class="switch">
+                <input
+                  type="checkbox"
+                  class="toggleSwitch"
+                  data-label-id="YoutubeLabel"
+                />
+                <span class="slider"></span>
+              </label>
+              <span id="YoutubeLabel">Connect</span>
+            </div>
+            <img src="{% static 'images/yt.png' %}" alt="" class="acc" />
+          </div>
+          <div class="box">
+            <div class="right-side">
+              <div class="box-topic">Google Ads</div>
+              <label class="switch">
+                <input
+                  type="checkbox"
+                  class="toggleSwitch"
+                  data-label-id="googleAdsLabel"
+                />
+                <span class="slider"></span>
+              </label>
+              <span id="googleAdsLabel">Connect</span>
+            </div>
+            <img src="{% static 'images/gads.png' %}" alt="" class="acc" />
+          </div>
+          <div class="box">
+            <div class="right-side">
+              <div class="box-topic">Google Analytics</div>
+              <label class="switch">
+                <input
+                  type="checkbox"
+                  class="toggleSwitch"
+                  data-label-id="googleLabel"
+                />
+                <span class="slider"></span>
+              </label>
+              <span id="googleLabel">Connect</span>
+            </div>
+            <img src="{% static 'images/gana.png' %}" alt="" class="acc" />
+          </div>
+          <div class="box">
+            <div class="right-side">
+              <div class="box-topic">Google Business</div>
+              <label class="switch">
+                <input
+                  type="checkbox"
+                  class="toggleSwitch"
+                  data-label-id="gBLabel"
+                />
+                <span class="slider"></span>
+              </label>
+              <span id="gBLabel">Connect</span>
+            </div>
+            <img src="{% static 'images/gbusiness.png' %}" alt="" class="acc" />
+          </div>
+          <div class="box">
+            <div class="right-side">
+              <div class="box-topic">Other</div>
+              <label class="switch">
+                <input
+                  type="checkbox"
+                  class="toggleSwitch"
+                  data-label-id="Other"
+                />
+                <span class="slider"></span>
+              </label>
+              <span id="Other">Connect</span>
+            </div>
+            <img
+              src="{% static 'images/monitoring.png' %}"
+              alt=""
+              class="acc"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".sidebarBtn");
+      sidebarBtn.onclick = function () {
+        sidebar.classList.toggle("active");
+        if (sidebar.classList.contains("active")) {
+          sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+        } else {
+          sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+        }
+      };
+
+      // Toggle Switch Functionality
+      document.querySelectorAll(".toggleSwitch").forEach((item) => {
+        item.addEventListener("change", function () {
+          var labelId = this.getAttribute("data-label-id");
+          var toggleLabel = document.getElementById(labelId);
+          if (this.checked) {
+            toggleLabel.textContent = "Connected";
+          } else {
+            toggleLabel.textContent = "Connect";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

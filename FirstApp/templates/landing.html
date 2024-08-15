@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <title>Elevate Trend</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/landing.css' %}" />
+  </head>
+  <body>
+    <section class="banner">
+      <header class="sticky">
+        <div class="container">
+          <div class="header-content">
+            <div class="logo-container">
+              <img src="{% static 'images/logo.png' %}" class="image" />
+              <h2 class="logo">Elevate Trend</h2>
+            </div>
+            <ul class="nav">
+              <li><a href="#">Demo</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+            <div class="hoverEffect">
+              <button class="btn" id="registerButton">Register</button>
+              <button class="btn" id="signInButton">SignIn</button>
+            </div>
+          </div>
+        </div>
+      </header>
+    </section>
+
+    <div class="afterheader">
+      <div id="tagline">
+        <p id="tagp" class="centered">
+          Your ultimate social media monitoring tool.
+        </p>
+        <p id="tagp">
+          Track, analyze, and elevate your social media presence with real-time
+          data insights and comprehensive analytics. Unlock the power of social
+          media with Elevate Trend.
+        </p>
+      </div>
+      <div id="imagean">
+        <img src="{% static 'images/image.png' %}" alt="LandingImage" />
+      </div>
+    </div>
+
+    <div class="features-intro">
+      <h2>These are some features of Elevate Trend</h2>
+    </div>
+
+    <div class="feature-section">
+      <div class="feature-box">
+        <h2 class="feature-title">Comprehensive Audience Insights</h2>
+        <p class="feature-description">
+          "Understand Your Audience with In-Depth Insights"
+        </p>
+      </div>
+      <div class="feature-box">
+        <h2 class="feature-title">Advanced Sentiment and Trend Analysis</h2>
+        <p class="feature-description">
+          "Leverage AI-Powered Sentiment and Trend Analysis"
+        </p>
+      </div>
+      <div class="feature-box">
+        <h2 class="feature-title">Automated Data Collection and Aggregation</h2>
+        <p class="feature-description">
+          "Streamline Your Insights with Automated Data Collection"
+        </p>
+      </div>
+    </div>
+    <div class="reviews-section">
+      <h2>Reviews</h2>
+      <div class="reviews-container">
+        <div id="reviews-wrapper">
+          <div id="reviews-container">
+            <!-- Feedback items will be dynamically inserted here -->
+          </div>
+        </div>
+      </div>
+      <button id="view-all-btn">View All Reviews</button>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <img src="{% static 'images/logo.png' %}" class="logo" alt="Logo" />
+        <div class="footer-section about">
+          <h2>About us</h2>
+          <ul>
+            <li><a href="#">Customers</a></li>
+            <li><a href="#">Why Elevate Tend</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Leadership</a></li>
+
+            <li><a href="#">Newsroom</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section support">
+          <h2>Support</h2>
+          <ul>
+            <li><a href="#">Need help?</a></li>
+            <li><a href="#">Product updates</a></li>
+            <li><a href="#">Contact sales</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="social-media">
+        <a
+          href="https://www.facebook.com/profile.php?id=61561488003906"
+          class="social-icon"
+          ><img
+            src="{% static 'images/facebook.png' %}"
+            class="image"
+            alt="Facebook"
+        /></a>
+        <a href="https://x.com/home?lang=en" class="social-icon"
+          ><img
+            src="{% static 'images/twitter.png' %}"
+            class="image"
+            alt="Twitter"
+        /></a>
+        <a
+          href="https://www.youtube.com/channel/UCQVuQWdZ5STp81-Ud4FRVOQ"
+          class="social-icon"
+          ><img src="{% static 'images/yt.png' %}" class="image" alt="Youtube"
+        /></a>
+        <a href="#" class="social-icon"
+          ><img
+            src="{% static 'images/linkedin.png' %}"
+            class="image"
+            alt="LinkedIn"
+        /></a>
+        <a href="https://www.instagram.com/_elevate_trend_/" class="social-icon"
+          ><img
+            src="{% static 'images/instagram.png' %}"
+            class="image"
+            alt="Instagram"
+        /></a>
+      </div>
+    </footer>
+
+    <!-- Chatbot Icon -->
+    <div class="chatbot-icon-container">
+      <img
+        src="{% static 'images/chatbot-icon.png' %}"
+        alt="Chatbot"
+        class="chatbot-icon"
+        id="chatbotIcon"
+      />
+    </div>
+
+    <div class="ChatBot" id="chatbotContainer">
+      <header>
+        <h2>Chatbot</h2>
+        <span class="material-symbols-outlined" id="closeChatbot">close</span>
+      </header>
+      <ul class="chatbox">
+        <li class="chat incoming">
+          <p>Hi there! <br />How can I help you today?</p>
+        </li>
+      </ul>
+      <div class="chat-input">
+        <textarea placeholder="Enter a message" required></textarea>
+        <span id="send-btn" class="material-symbols-outlined">send</span>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const reviews = [
+          {
+            name: "John Doe",
+            feedback: "Great product! It exceeded my expectations.",
+          },
+          {
+            name: "Jane Smith",
+            feedback: "Good value for money. I’m satisfied with the purchase.",
+          },
+          {
+            name: "Alice Johnson",
+            feedback: "The quality is top-notch. Highly recommend it.",
+          },
+          {
+            name: "Bob Brown",
+            feedback: "Decent product but could use some improvements.",
+          },
+          {
+            name: "Charlie Davis",
+            feedback: "Fantastic! Will definitely buy again.",
+          },
+          {
+            name: "Eva Adams",
+            feedback: "Absolutely loved it! Worth every penny.",
+          },
+          {
+            name: "Mike Brown",
+            feedback: "The product is okay, but the service was excellent.",
+          },
+          {
+            name: "Linda Carter",
+            feedback: "I am very pleased with my purchase.",
+          },
+          {
+            name: "James Wilson",
+            feedback: "It's a great product, but delivery was slow.",
+          },
+        ];
+
+        const reviewsContainer = document.getElementById("reviews-container");
+        const viewAllBtn = document.getElementById("view-all-btn");
+
+        // Function to create review boxes
+        function createReviewBox(review) {
+          const reviewBox = document.createElement("div");
+          reviewBox.className = "review-box";
+          reviewBox.innerHTML = `<h3>${review.name}</h3><p>${review.feedback}</p>`;
+          return reviewBox;
+        }
+
+        // Load only the first 3 reviews initially
+        function loadInitialReviews() {
+          reviewsContainer.innerHTML = "";
+          reviews.slice(0, 3).forEach((review) => {
+            reviewsContainer.appendChild(createReviewBox(review));
+          });
+        }
+
+        loadInitialReviews(); // Load initial reviews
+
+        // Redirect
+        registerButton.addEventListener("click", function () {
+          window.location.href = "{% url 'signup' %}";
+        });
+
+        signInButton.addEventListener("click", function () {
+          window.location.href = "{% url 'signin' %}";
+        });
+
+        // Redirect to the all reviews page on button click
+        viewAllBtn.addEventListener("click", function () {
+          window.location.href = "{% url 'all_reviews' %}"; // Navigate to a page that shows all reviews
+        });
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const chatbotIcon = document.getElementById("chatbotIcon");
+        const chatbotContainer = document.getElementById("chatbotContainer");
+        const closeChatbot = document.getElementById("closeChatbot");
+
+        // Open chatbot on icon click
+        chatbotIcon.addEventListener("click", function () {
+          chatbotContainer.style.display = "block";
+        });
+
+        // Close chatbot on close button click
+        closeChatbot.addEventListener("click", function () {
+          chatbotContainer.style.display = "none";
+        });
+      });
+    </script>
+  </body>
+</html>

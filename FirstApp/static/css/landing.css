@@ -1,0 +1,450 @@
+/* Root Variables */
+:root {
+  --primary-color: #1c7d7e;
+  --secondary-color: #201e43;
+  --accent-color: #2575fc;
+  --background-color: #f9fafa;
+  --text-color: #333;
+  --hover-color: #1c7d7e;
+  --font-family: "Poppins", sans-serif;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+}
+
+/* Container Styling */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures the header stays on top of other content */
+  background-color: #0a2558; /* Ensures background color is consistent */
+}
+
+/* Header Content Flexbox */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo Container Flexbox */
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.logo-container img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px; /* Space between image and logo */
+}
+
+.logo {
+  color: white;
+  font-weight: 500;
+}
+
+/* Navigation Styling */
+.nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  padding: 30px 26px;
+}
+
+.nav li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav li a:hover {
+  color: var(--hover-color);
+}
+
+/* Button Styling */
+.btn {
+  padding: 12px 35px;
+  background-color: rgb(133, 18, 240);
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--accent-color);
+}
+
+/* Banner Styling */
+.banner {
+  background-color: rgb(24, 5, 35);
+  background-repeat: no-repeat;
+  background-size: 627px;
+}
+
+/* Container after the header */
+.afterheader {
+  display: flex;
+  height: 450px;
+  background: #f3f5f5; /* Gradient background */
+  padding: 20px;
+  /*border-radius: 15px; /* Rounded corners */
+}
+
+/* #f3f5f5 */
+
+/* Tagline section styling */
+/* Tagline section styling */
+#tagline {
+  width: 70%;
+  height: 100%;
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+  padding: 150px; /* Add padding around the text */
+  color: #030303; /* Light color for readability */
+  margin: auto; /* Center the entire #tagline div */
+}
+
+/* Tagline text styling */
+#tagp {
+  color: #070707; /* Pure white for maximum contrast */
+  font-size: 1.3rem; /* Increase text size */
+  font-family: var(--font-family); /* Modern, stylish font */
+  text-align: center; /* Center text alignment */
+  width: 100%; /* Ensure the text spans the full width of the parent container */
+  max-width: 100%; /* Prevent text from overflowing */
+  line-height: 1.4; /* Adjust line height for better readability */
+  font-weight: 500; /* Medium font weight for better emphasis */
+  font-style: italic;
+}
+
+/* Specific styling for the first centered line */
+.centered {
+  font-size: 2rem; /* Increase text size for emphasis */
+  font-weight: 500; /* Bold font weight for better emphasis */
+  font-style: italic;
+}
+
+/* Image section styling */
+#imagean {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image styling */
+#imagean img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire box without stretching */
+  border-radius: 10px; /* Rounded corners for the image */
+}
+
+/* Features Intro Styling */
+.features-intro {
+  text-align: center;
+  margin: 40px 0 20px 0; /* Spacing around the intro text */
+  font-family: var(--font-family);
+  font-size: 1.5rem;
+  color: #0a2558;
+}
+
+/* Feature section styling */
+.feature-section {
+  display: flex;
+  justify-content: space-around; /* Evenly distribute space around the feature boxes */
+  padding: 20px;
+  margin-right: 10px;
+  margin-top: 20px; /* Add space above the feature section */
+  background: #f8f9fa; /* Light background for the feature section */
+  border-radius: 15px; /* Rounded corners */
+  gap: 15px;
+}
+
+/* Individual feature box styling */
+.feature-box {
+  background: #ffffff; /* White background for each feature box */
+  width: 30%; /* Width of each feature box */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 15px 15px 15px 15px rgba(9, 9, 9, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for hover effect */
+  text-align: center; /* Center align text within the box */
+}
+
+.feature-box:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Feature title styling */
+.feature-title {
+  font-family: var(--font-family); /* Match font with tagline */
+  font-size: 1.5rem; /* Size for the feature title */
+  margin-bottom: 10px; /* Space below the title */
+  color: #0a2558; /* Dark color for the title */
+}
+
+/* Feature description styling */
+.feature-description {
+  font-family: var(--font-family); /* Match font with tagline */
+  font-size: 1.1rem; /* Size for the feature description */
+  color: #666; /* Slightly lighter color for description */
+}
+
+/* Reviews section styling */
+.reviews-section {
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 5px 15px rgba(21, 20, 20, 0.1); /* Subtle shadow for depth */
+  text-align: center; /* Center text */
+}
+
+/* Reviews container styling */
+.reviews-container {
+  display: flex;
+  overflow: hidden; /* Hide overflow */
+  justify-content: center; /* Center items horizontally */
+}
+
+/* Wrapper for horizontal scrolling */
+#reviews-wrapper {
+  display: flex;
+  overflow-x: auto; /* Allow horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Snap to each item */
+}
+
+/* Inner container for reviews */
+#reviews-container {
+  display: flex;
+  scroll-snap-align: start; /* Snap to the start of each item */
+}
+
+/* Individual review box styling */
+.review-box {
+  background: #ffffff; /* White background for each review box */
+  padding: 15px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0, 0.1); /* Subtle shadow */
+  margin-right: 10px; /* Space between review boxes */
+  width: 300px; /* Fixed width for each review box */
+  text-align: left; /* Align text to the left */
+  flex-shrink: 0; /* Prevent shrinking */
+  scroll-snap-align: start; /* Snap to the start of each item */
+}
+
+/* View All button styling */
+#view-all-btn {
+  background-color: var(--secondary-color); /* Primary color */
+  color: #ffffff; /* White text */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease-in-out;
+  margin-top: 20px; /* Space above the button */
+}
+
+#view-all-btn:hover {
+  background-color: var(--accent-color); /* Slightly lighter on hover */
+}
+
+/* Chatbot Icon Container */
+.chatbot-icon-container {
+  position: fixed; /* Fixed position on the screen */
+  bottom: 20px; /* Distance from the bottom of the screen */
+  right: 20px; /* Distance from the right of the screen */
+  cursor: pointer; /* Change cursor to pointer when hovering */
+  z-index: 1000; /* Ensure the icon is above other elements */
+}
+
+/* Chatbot Icon Image */
+.chatbot-icon-container img {
+  width: 60px; /* Width of the icon */
+  height: 60px; /* Height of the icon */
+  border-radius: 50%; /* Make the icon circular */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+}
+
+/* Hover Effect for Chatbot Icon */
+.chatbot-icon-container img:hover {
+  transform: scale(1.1); /* Slightly enlarge the icon on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* Chatbot Container */
+.ChatBot {
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  width: 400px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+    0 32px 64px -48px rgba(0, 0, 0, 0.5);
+  display: none; /* Initially hidden */
+  z-index: 1000;
+}
+
+/* Chatbot Header */
+.ChatBot header {
+  background: #724ae8;
+  padding: 16px;
+  text-align: center;
+  position: relative;
+}
+
+/* Chatbot Header Title */
+.ChatBot header h2 {
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+/* Close Button */
+.ChatBot header span {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  color: #fff;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+/* Chatbox Messages */
+.chatbox {
+  height: 300px;
+  overflow-y: auto;
+  padding: 30px 20px 20px;
+}
+
+/* Chat Input */
+.chat-input {
+  position: relative;
+  background: #fff;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+}
+
+.chat-input textarea {
+  width: 80%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.chat-input span {
+  color: #724ae8;
+  font-size: 1.35rem;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+footer {
+  background-color: #0a2558;
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: flex-start; /* Align items to the start */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  padding: 0 10px; /* Reduced padding */
+  text-align: left;
+}
+
+.footer-section h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-section ul li a:hover {
+  color: #f1f1f1; /* Light color for hover effect */
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.social-icon {
+  margin: 0 15px; /* Space between icons */
+}
+
+.social-icon img {
+  width: 30px; /* Adjust size as needed */
+  height: 30px; /* Adjust size as needed */
+}
+
+/* Additional Styles for User Attraction */
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .feature-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-box {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
